@@ -21,7 +21,7 @@ function Home() {
         'React.js', 'Vue.js',
         'Web Development',
       ],
-      typeSpeed: 35,
+      typeSpeed: 10,
     });
 
     return () => {
