@@ -18,9 +18,10 @@ function Home() {
         'HTML, CSS, JavaScript',
         'SQL , MongoDB',
         'Linux (Ubuntu)',
+        'React.js', 'Vue.js'
         'Web Development',
       ],
-      typeSpeed: 50,
+      typeSpeed: 35,
     });
 
     return () => {
