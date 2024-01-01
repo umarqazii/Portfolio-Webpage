@@ -18,9 +18,10 @@ function Home() {
         'HTML, CSS, JavaScript',
         'SQL , MongoDB',
         'Linux (Ubuntu)',
+        'React.js', 'Vue.js',
         'Web Development',
       ],
-      typeSpeed: 50,
+      typeSpeed: 70,
     });
 
     return () => {
@@ -38,13 +39,13 @@ function Home() {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="intro-text">
-                <h1 className="intro-lead-in">
+                <h1 className="intro-lead-in" >
                   <h3>Hi! My name is</h3>
-                  <span className="typedName" style={{ color: '#72c4bd' }}></span>
+                  <span className="typedName" style={{ color: '#72c4bd', fontFamily: 'Audiowide, sans-serif' }}></span>
                 </h1>
                 <h1 className="intro-heading">
                   <h3>and I am proficient in</h3>
-                  <span id="element" className="typedSkill" style={{ color: '#72c4bd' }}></span>
+                  <span id="element" className="typedSkill" style={{ color: '#72c4bd', fontFamily: 'Audiowide, sans-serif' }}></span>
                 </h1>
               </div>
               <br />
