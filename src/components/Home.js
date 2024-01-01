@@ -18,7 +18,7 @@ function Home() {
         'HTML, CSS, JavaScript',
         'SQL , MongoDB',
         'Linux (Ubuntu)',
-        'React.js', 'Vue.js'
+        'React.js', 'Vue.js',
         'Web Development',
       ],
       typeSpeed: 35,
