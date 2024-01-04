@@ -5,14 +5,14 @@
     padding: 50px 0;
   }
   
-  .card {
+  .CardContact {
     background-color: #454d55; /* Darker grey background color for cards */
     margin: 20px;
     max-width: 800px; /* Set maximum width for the cards */
     min-width: 50%;
   }
   
-  .card-header {
+  .CardHeaderContact {
     background-color: #343a40; /* Dark grey background color for the card header */
     border-bottom: 1px solid rgba(255, 255, 255, 0.125); /* White bottom border */
   }
@@ -21,15 +21,15 @@
     color: white; /* White text color for navigation links */
   }
   
-  .card-body {
+  .CardBodyContact {
     padding: 20px;
   }
 
-  .card-text, .card-title {
+  .CardTextContact, .card-title {
     color: white;
   }
 
-  .card-img-top {
-    width: 7%;
-    height: 7%;
+  .CardImgContact {
+    width: 50px;
   }
+

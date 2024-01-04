@@ -14,48 +14,48 @@ function Contact() {
         switch (selectedTab) {
             case 'facebook':
                 return (
-                    <Card.Body>
-                        <Card.Img variant="top" src={facebookimg} style={{ borderRadius: '5px' }} />
-                        <Card.Text>
-                            Username: Umar Qazi
+                    <Card.Body className="CardBodyContact">
+                        <Card.Img className="CardImgContact" variant="top" src={facebookimg}  /><br /><br/>
+                        <Card.Text className="CardTextContact">
+                            <b>Username:</b> Umar Qazi
                             <br />
-                            Link: <a href="https://www.facebook.com/hafiz.umarqazi.7">https://www.facebook.com/hafiz.umarqazi.7</a>
+                            <a href="https://www.facebook.com/hafiz.umarqazi.7">https://www.facebook.com/hafiz.umarqazi.7</a>
                         </Card.Text>
                         <Button variant="dark" href="https://www.facebook.com/hafiz.umarqazi.7" target="_blank" rel="noopener noreferrer">Go to Facebook</Button>
                     </Card.Body>
                 );
             case 'instagram':
                 return (
-                    <Card.Body>
-                        <Card.Img variant="top" src={instagramimg} style={{ borderRadius: '5px' }} />
-                        <Card.Text>
-                            Username: umarqazii
+                    <Card.Body className="CardBodyContact">
+                        <Card.Img className="CardImgContact" variant="top" src={instagramimg}  /><br/><br/>
+                        <Card.Text className="CardTextContact">
+                        <b>Username:</b> umarqazii
                             <br />
-                            Link: <a href="https://www.instagram.com/umarqazii/">https://www.instagram.com/umarqazii/</a>
+                            <a href="https://www.instagram.com/umarqazii/">https://www.instagram.com/umarqazii/</a>
                         </Card.Text>
                         <Button variant="dark" href="https://www.instagram.com/umarqazii/" target="_blank" rel="noopener noreferrer">Go to Instagram</Button>
                     </Card.Body>
                 );
             case 'github':
                 return (
-                    <Card.Body>
-                        <Card.Img variant="top" src={githubimg} style={{ borderRadius: '5px' }} />
-                        <Card.Text>
-                            Username: umarqazii
+                    <Card.Body className="CardBodyContact">
+                        <Card.Img className="CardImgContact" variant="top" src={githubimg} style={{borderRadius: '5px'}}  /><br/><br/>
+                        <Card.Text className="CardTextContact">
+                        <b>Username:</b> umarqazii
                             <br />
-                            Link: <a href="https://github.com/umarqazii">https://github.com/umarqazii</a>
+                            <a href="https://github.com/umarqazii">https://github.com/umarqazii</a>
                         </Card.Text>
                         <Button variant="dark" href="https://github.com/umarqazii" target="_blank" rel="noopener noreferrer">Go to GitHub</Button>
                     </Card.Body>
                 );
             case 'linkedin':
                 return (
-                    <Card.Body>
-                        <Card.Img variant="top" src={linkedinimg} style={{ borderRadius: '5px' }} />
-                        <Card.Text>
-                            Username: Umar Qazi
+                    <Card.Body className="CardBodyContact">
+                        <Card.Img className="CardImgContact" variant="top" src={linkedinimg}  /><br/><br/>
+                        <Card.Text className="CardTextContact">
+                        <b>Username:</b> Umar Qazi
                             <br />
-                            Link: <a href="https://www.linkedin.com/in/umar-qazi-61b62a24a/">https://www.linkedin.com/in/umar-qazi-61b62a24a/</a>
+                            <a href="https://www.linkedin.com/in/umar-qazi-61b62a24a/">https://www.linkedin.com/in/umar-qazi-61b62a24a/</a>
                         </Card.Text>
                         <Button variant="dark" href="https://www.linkedin.com/in/umar-qazi-61b62a24a/" target="_blank" rel="noopener noreferrer">Go to LinkedIn</Button>
                     </Card.Body>
@@ -63,10 +63,10 @@ function Contact() {
 
             case 'gmail':
                 return (
-                    <Card.Body>
-                        <Card.Img variant="top" src={gmailimg} style={{ borderRadius: '5px' }} />
-                        <Card.Text>
-                            Personal: umarqazii983@gmail.com
+                    <Card.Body className="CardBodyContact">
+                        <Card.Img className="CardImgContact" variant="top" src={gmailimg} /><br/><br/>
+                        <Card.Text className="CardTextContact">
+                            <b>Personal:</b> umarqazii983@gmail.com <br />
                             {/* Button to copy the email address */}
                             <button
                                 className="btn btn-dark" // Apply Bootstrap classes
@@ -77,7 +77,7 @@ function Contact() {
                             </button>
                             <br />
                             <br />
-                            University: i200968@nu.edu.pk
+                            <b>University:</b> i200968@nu.edu.pk <br />
                             <button
                                 className="btn btn-dark" // Apply Bootstrap classes
                                 onClick={() => navigator.clipboard.writeText('i200968@nu.edu.pk')}
@@ -101,8 +101,8 @@ function Contact() {
             <h1 style={{ fontFamily: 'Audiowide, sans-serif', color: 'white', marginTop: '50px' }}>Contact Me</h1>
 
             <div className="ContactContainer">
-                <Card>
-                    <Card.Header>
+                <Card className="CardContact">
+                    <Card.Header className="CardHeaderContact">
                         <Nav variant="tabs" defaultActiveKey="#github">
                             <Nav.Item>
                                 <Nav.Link href="#github" onClick={() => setSelectedTab('github')}>GitHub</Nav.Link>
