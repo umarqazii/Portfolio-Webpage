@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Typed from 'typed.js';
 import '../App.css';
-import myPic from '../dp.jpg'; // Import your image
+import myPic from '../assets/dp.jpg'; // Import your image
 
 function Home() {
   useEffect(() => {

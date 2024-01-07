@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import '../timeline.css';
-import dotimg from '../dot.png';
+import dotimg from '../assets/dot.png';
 
 
 

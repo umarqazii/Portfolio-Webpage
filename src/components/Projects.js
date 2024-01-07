@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "./Navbar";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import cardimg from '../Transport.png';
-import lincenseimg from '../License.png';
-import portfolioimg from '../Portfolio.png';
-import cryptoimg from '../crypto.png';
+import cardimg from '../assets/Transport.png';
+import lincenseimg from '../assets/License.png';
+import portfolioimg from '../assets/Portfolio.png';
+import cryptoimg from '../assets/crypto.png';
 import '../App.css';
 
 function Projects() {

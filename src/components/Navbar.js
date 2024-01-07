@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../logo.png'; // Import the logo image
+import logo from '../assets/logo.png'; // Import the logo image
 import '../Navbar.css'; // Create this file for custom styles if needed
 
 

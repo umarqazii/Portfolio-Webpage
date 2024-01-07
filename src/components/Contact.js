@@ -2,13 +2,23 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { Card, Nav, Button } from 'react-bootstrap';
 import '../Contact.css';
-import githubimg from '../github.png';
-import linkedinimg from '../linkedin.png';
-import facebookimg from '../fb.png';
-import instagramimg from '../insta.png';
-import gmailimg from '../gmail.png';
+import githubimg from '../assets/github.png';
+import linkedinimg from '../assets/linkedin.png';
+import facebookimg from '../assets/fb.png';
+import instagramimg from '../assets/insta.png';
+import gmailimg from '../assets/gmail.png';
 function Contact() {
     const [selectedTab, setSelectedTab] = useState('github'); // State to track the selected tab
+
+    // Function to handle the email to personal email address
+    const handleEmailtoPersonal = () => {
+        window.location.href = "mailto: umarqazii@gmail.com";
+    };
+
+    // Function to handle the email to university email address
+    const handleEmailtoUniversity = () => {
+        window.location.href = "mailto: i200968@nu.edu.pk";
+    };
 
     const renderContent = () => {
         switch (selectedTab) {
@@ -19,9 +29,10 @@ function Contact() {
                         <Card.Text className="CardTextContact">
                             <b>Username:</b> Umar Qazi
                             <br />
-                            <a href="https://www.facebook.com/hafiz.umarqazi.7">https://www.facebook.com/hafiz.umarqazi.7</a>
+                            
                         </Card.Text>
-                        <Button variant="dark" href="https://www.facebook.com/hafiz.umarqazi.7" target="_blank" rel="noopener noreferrer">Go to Facebook</Button>
+                        <Button variant="dark" href="https://www.facebook.com/hafiz.umarqazi.7" target="_blank" rel="noopener noreferrer" style={{marginRight: '5px'}}>Go to Facebook</Button>
+                        <Button variant="dark" onClick={() => navigator.clipboard.writeText('https://www.facebook.com/hafiz.umarqazi.7')} >Copy Link</Button>
                     </Card.Body>
                 );
             case 'instagram':
@@ -31,9 +42,9 @@ function Contact() {
                         <Card.Text className="CardTextContact">
                         <b>Username:</b> umarqazii
                             <br />
-                            <a href="https://www.instagram.com/umarqazii/">https://www.instagram.com/umarqazii/</a>
                         </Card.Text>
-                        <Button variant="dark" href="https://www.instagram.com/umarqazii/" target="_blank" rel="noopener noreferrer">Go to Instagram</Button>
+                        <Button variant="dark" href="https://www.instagram.com/umarqazii/" target="_blank" rel="noopener noreferrer" style={{marginRight:'5px'}}>Go to Instagram</Button>
+                        <Button variant="dark" onClick={() => navigator.clipboard.writeText('https://www.instagram.com/umarqazii/')} >Copy Link</Button>
                     </Card.Body>
                 );
             case 'github':
@@ -43,9 +54,9 @@ function Contact() {
                         <Card.Text className="CardTextContact">
                         <b>Username:</b> umarqazii
                             <br />
-                            <a href="https://github.com/umarqazii">https://github.com/umarqazii</a>
                         </Card.Text>
-                        <Button variant="dark" href="https://github.com/umarqazii" target="_blank" rel="noopener noreferrer">Go to GitHub</Button>
+                        <Button variant="dark" href="https://github.com/umarqazii" target="_blank" rel="noopener noreferrer" style={{marginRight:'5px'}}>Go to GitHub</Button>
+                        <Button variant="dark" onClick={() => navigator.clipboard.writeText('https://github.com/umarqazii')}>Copy Link</Button>
                     </Card.Body>
                 );
             case 'linkedin':
@@ -55,9 +66,9 @@ function Contact() {
                         <Card.Text className="CardTextContact">
                         <b>Username:</b> Umar Qazi
                             <br />
-                            <a href="https://www.linkedin.com/in/umar-qazi-61b62a24a/">https://www.linkedin.com/in/umar-qazi-61b62a24a/</a>
                         </Card.Text>
-                        <Button variant="dark" href="https://www.linkedin.com/in/umar-qazi-61b62a24a/" target="_blank" rel="noopener noreferrer">Go to LinkedIn</Button>
+                        <Button variant="dark" href="https://www.linkedin.com/in/umar-qazi-61b62a24a/" target="_blank" rel="noopener noreferrer" style={{marginRight: '5px'}}>Go to LinkedIn</Button>
+                        <Button variant="dark" onClick={() => navigator.clipboard.writeText('https://www.linkedin.com/in/umar-qazi-61b62a24a/')} >Copy Link</Button>
                     </Card.Body>
                 );
 
@@ -75,6 +86,13 @@ function Contact() {
                             >
                                 Copy
                             </button>
+                            <button
+                                className="btn btn-dark" // Apply Bootstrap classes
+                                onClick={handleEmailtoPersonal}
+                                style={{ marginLeft: '10px' }}
+                            >
+                                Contact Me
+                            </button>
                             <br />
                             <br />
                             <b>University:</b> i200968@nu.edu.pk <br />
@@ -85,6 +103,14 @@ function Contact() {
                             >
                                 Copy
                             </button>
+                            <button
+                                className="btn btn-dark" // Apply Bootstrap classes
+                                onClick={handleEmailtoUniversity}
+                                style={{ marginLeft: '10px' }}
+                            >
+                                Contact Me
+                            </button>
+                             
                         </Card.Text>
                     </Card.Body>
 
