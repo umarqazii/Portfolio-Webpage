@@ -60,7 +60,8 @@ function Home() {
       <div className="container" style={{ marginTop: '-120px' }}>
         <div className="row">
           <div className="col text-center">
-            <a href="https://drive.google.com/file/d/1--kO_XPUj1pxSmxJNmoeS94hXMCRFKIZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-lg" style={{ fontFamily: 'Audiowide, sans-serif' }}>Download My Resume</a>
+            <a href="https://drive.google.com/file/d/1ceXMyZQeL3ckBce_3quPR7R71khKHZRt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-lg" style={{ fontFamily: 'Audiowide, sans-serif', marginRight:'15px' }}>Download My CV</a>
+            <a href="https://drive.google.com/file/d/1L-UDtbKUbHxFXltagb9ULCRCQ8QmStjg/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-lg" style={{ fontFamily: 'Audiowide, sans-serif' }}>Download My Resume</a>
           </div>
         </div>
       </div>
