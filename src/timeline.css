@@ -54,21 +54,7 @@ body{
     animation-delay: 4s;
 }
 
-.cont:nth-child(6){
-    animation-delay: 5s;
-}
 
-.cont:nth-child(7){
-    animation-delay: 6s;
-}
-
-.cont:nth-child(8){
-    animation-delay: 7s;
-}
-
-.cont:nth-child(9){
-    animation-delay: 8s;
-}
 
 
 .text-box{
@@ -110,7 +96,7 @@ body{
     top: 0;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 9s linear forwards;
+    animation: moveline 5s linear forwards;
 }
 
 @keyframes moveline{

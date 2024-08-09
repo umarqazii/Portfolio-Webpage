@@ -30,7 +30,7 @@ const Navbar = () => {
               <Link className="nav-link" to="/" style={{ fontFamily: 'Audiowide, sans-serif' }}>Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/skills" style={{ fontFamily: 'Audiowide, sans-serif' }}>Skills</Link>
+              <Link className="nav-link" to="/experience" style={{ fontFamily: 'Audiowide, sans-serif' }}>Experience</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/projects" style={{ fontFamily: 'Audiowide, sans-serif' }}>Projects</Link>

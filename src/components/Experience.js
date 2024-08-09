@@ -5,7 +5,7 @@ import dotimg from '../assets/dot.png';
 
 
 
-function Skills() {
+function Experience() {
 
     return (
         <div className="App" >
@@ -17,9 +17,10 @@ function Skills() {
                 <div class="cont left-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
-                        <h2>1st Semester</h2>
+                        <h2>1st & 2nd Semester</h2>
                         <small>2020-2021</small>
-                        <p>C++ and HTML Basics</p>
+                        <p>C++ for Programming Fundamentals. HTML Basics</p>
+                        <p>C++ Object Oriented Programming</p>
                         <div class="left-cont-arrow"></div>
                     </div>
                 </div>
@@ -27,28 +28,9 @@ function Skills() {
                 <div class="cont right-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
-                        <h2>2nd Semester</h2>
-                        <small>2021-2021</small>
-                        <p>C++ Object Oriented Programming</p>
-                        <div class="right-cont-arrow"></div>
-                    </div>
-                </div>
-
-                <div class="cont left-cont">
-                    <img src={dotimg} alt="" />
-                    <div class="text-box">
-                        <h2>3rd Semester</h2>
+                        <h2>3rd and 4th Semester</h2>
                         <small>2021-2022</small>
                         <p>Data Structures and Algorithms. Assembly Language</p>
-                        <div class="left-cont-arrow"></div>
-                    </div>
-                </div>
-
-                <div class="cont right-cont">
-                    <img src={dotimg} alt="" />
-                    <div class="text-box">
-                        <h2>4th Semester</h2>
-                        <small>2022-2022</small>
                         <p>SQL Database and Multithreading in C Language</p>
                         <div class="right-cont-arrow"></div>
                     </div>
@@ -57,9 +39,10 @@ function Skills() {
                 <div class="cont left-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
-                        <h2>5th Semester</h2>
+                        <h2>5th and 6th Semester</h2>
                         <small>2022-2023</small>
                         <p>Project in Java and JavaFX</p>
+                        <p>Python for Artificial Intelligence. Parallel and Distributed Computing using MPI, OpenCL, Hadoop frameworks</p>
                         <div class="left-cont-arrow"></div>
                     </div>
                 </div>
@@ -67,38 +50,21 @@ function Skills() {
                 <div class="cont right-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
-                        <h2>6th Semester</h2>
-                        <small>2023-2023</small>
-                        <p>Python for Artificial Intelligence. Parallel and Distributed Computing using MPI, OpenCL, Hadoop frameworks</p>
-                        <div class="right-cont-arrow"></div>
-                    </div>
-                </div>
-
-                <div class="cont left-cont">
-                    <img src={dotimg} alt="" />
-                    <div class="text-box">
-                        <h2>7th Semester</h2>
+                        <h2>7th and 8th Semester</h2>
                         <small>2023-2024</small>
                         <p>Extensive study on Computer Networks. Made multiple web Development projects in React.js and Vue.js</p>
-                        <div class="left-cont-arrow"></div>
-                    </div>
-                </div>
-
-                <div class="cont right-cont">
-                    <img src={dotimg} alt="" />
-                    <div class="text-box">
-                        <h2>8th Semester</h2>
-                        <small>2024-2024</small>
                         <p>Final Year Project (MindSight) brought to completion. AWS Cloud Computing. Distributed Data Engineering</p>
                         <div class="right-cont-arrow"></div>
                     </div>
                 </div>
 
+                
+
                 <div class="cont left-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
                         <h2>Summer Internship</h2>
-                        <small>June 2024- Aug 2024</small>
+                        <small><b>Mugutech</b> June 2024- Aug 2024</small>
                         <p>Web Development Internship</p>
                         <p><b>Technologies:</b> React.js, Node.js, Express, MySQL, Wordpress, Figma</p>
                         <div class="left-cont-arrow"></div>
@@ -110,4 +76,4 @@ function Skills() {
     );
 }
 
-export default Skills;
+export default Experience;
