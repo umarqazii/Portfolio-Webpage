@@ -88,13 +88,13 @@ section {
 
   h1 {
     font-size: clamp(1.5rem, 4vw, 3rem); /* Set a more balanced range for font size */
+    font-family: "AudioWide", sans-serif;
     color: #cac9c9;
   }
 
   p {
     font-size: clamp(1rem, 3vw, 2rem); /* Adjusted for better scaling on smaller screens */
     color: #cac9c9;
-    
   }
 
   &:nth-of-type(1) {

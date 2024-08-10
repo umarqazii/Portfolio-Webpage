@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Typed from "typed.js";
-import Lenis from "@studio-freight/lenis";
+import { Link } from 'react-router-dom';
+// import Lenis from "@studio-freight/lenis";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
@@ -9,8 +10,12 @@ import "../App.css";
 import myPic from "../assets/dp1.jpg"; // Import your image
 import cv from "../assets/UmarQaziCV.pdf";
 import resume from "../assets/UmarQaziResume.pdf";
-
+import { SlActionRedo } from "react-icons/sl";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileCode } from '@fortawesome/free-solid-svg-icons';
 function Home() {
+
+
 
   useEffect(() => {
     // const lenis = new Lenis();
@@ -47,6 +52,23 @@ function Home() {
       });
     });
 
+    gsap.fromTo(".folder-icon", {
+      opacity: 0, // Initially invisible
+      y: 40, // Move it a bit downwards
+    }, {
+      opacity: 1, // Fully visible
+      y: -25, // Move it to its original position
+      scrollTrigger: {
+        trigger: ".folder-icon",
+        start: "top 90%", // Adjust as necessary
+        end: "top 50%",
+        scrub: true,
+        markers: false,
+      },
+      duration: 1,
+      ease: "power3.out"
+    });
+
     var typedName = new Typed(".typedName", {
       strings: ["Umar Qazi"],
       typeSpeed: 150,
@@ -81,8 +103,9 @@ function Home() {
 
   return (
     <div className="App">
+      
+      
       <Navbar />
-
       <header className="App-header" >
         {" "}
         {/* Custom margin-top */}
@@ -143,17 +166,22 @@ function Home() {
 
       
       <div className="responsive-section">
-  <section>
-    <h1 className="reveal-type" style={{fontFamily: "Audiowide, sans-serif"}}>More About Me</h1>
-    <p className="reveal-type" style={{fontFamily: "Audiowide, sans-serif"}}>
-      I am a motivated Computer Science graduate with strong skills in C/C++, JavaScript, SQL, and web development technologies including the MERN stack. My academic journey, including a Bachelor's from FAST-NUCES, coupled with hands-on experience through internships and projects, has equipped me with a robust foundation in full-stack development. I’ve successfully led and contributed to projects like MindSight, a MERN-based anxiety detection system, and a Hospital Management System. My portfolio showcases my proficiency in building dynamic web applications and managing complex systems. I am eager to bring my knowledge and passion for technology to impactful real-world projects.
-    </p>
-  </section>
+      <section>
+  <h1 className="reveal-type" style={{ fontFamily: "Audiowide" }}><b>More About Me</b></h1>
+  <p className="reveal-type" style={{ fontFamily: "Audiowide" }}>
+    I am a motivated Computer Science graduate with strong skills in C/C++, JavaScript, SQL, and web development technologies including the MERN stack. My academic journey, including a Bachelor's from FAST-NUCES, coupled with hands-on experience through internships and projects, has equipped me with a robust foundation in full-stack development. I’ve successfully led and contributed to projects like MindSight, a MERN-based anxiety detection system, and a Hospital Management System. My portfolio showcases my proficiency in building dynamic web applications and managing complex systems. I am eager to bring my knowledge and passion for technology to impactful real-world projects.
+    <br /><br />
+    <Link to="/projects" className="folder-icon" style={{ textDecoration: 'none', color: 'green' }}>
+      Take a Look at my Projects
+      <FontAwesomeIcon className="" icon={faFileCode} style={{ marginLeft: '8px', color: 'green' }} />
+    </Link>
+  </p>
+</section>
 </div>
 
 
       {/* Add a button that would download my resume*/}
-      <div className="container" style={{ marginTop: "20px" }}>
+      <div className="container" style={{ marginTop: "-20px" }}>
         <div className="row">
           <div className="col text-center">
             <button
