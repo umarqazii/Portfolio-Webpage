@@ -12,7 +12,7 @@ function Contact() {
 
     // Function to handle the email to personal email address
     const handleEmailtoPersonal = () => {
-        window.location.href = "mailto: umarqazii@gmail.com";
+        window.location.href = "mailto: umarqazii983@gmail.com";
     };
 
     // Function to handle the email to university email address
