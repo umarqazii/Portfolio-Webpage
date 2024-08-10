@@ -75,7 +75,7 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
 
 @media (max-width: 768px) {
   .responsive-section {
-    margin-top: -20vh; /* Less negative margin on smaller screens */
+    margin-top: -25vh; /* Less negative margin on smaller screens */
   }
 }
 
