@@ -57,7 +57,7 @@ function Home() {
       y: 40, // Move it a bit downwards
     }, {
       opacity: 1, // Fully visible
-      y: -25, // Move it to its original position
+      y: 0, // Move it to its original position
       scrollTrigger: {
         trigger: ".folder-icon",
         start: "top 90%", // Adjust as necessary
