@@ -181,7 +181,7 @@ function Home() {
 
 
       {/* Add a button that would download my resume*/}
-      <div className="container" style={{ marginTop: "-20px" }}>
+      <div className="cv-container" style={{ marginTop: "-20px" }}>
         <div className="row">
           <div className="col text-center">
             <button
