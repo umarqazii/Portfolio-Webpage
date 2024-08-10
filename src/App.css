@@ -61,48 +61,24 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   
 }
+section {
+  height: 100vh;
+  padding: 0 clamp(1rem, 5vw, 4rem); /* Adjusted padding for better responsiveness */
+  display: grid;
+  place-content: center;
+  text-align: center; /* Center the text within the section */
 
-.scroll-reveal {
-  text-align: center;
-  padding-block: clamp(1rem,15vh, 15rem);
-}
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Set a more balanced range for font size */
+    color: #cac9c9;
+  }
 
-.scroll-reveal h2 {
-  font-size: 5rem;
-  line-height: 1;
-}
+  p {
+    font-size: clamp(1rem, 3vw, 2rem); /* Adjusted for better scaling on smaller screens */
+    color: #cac9c9;
+  }
 
-.scroll-reveal p {
-  font-size: 1.75rem;
-  line-height: 1.3;
-  max-width: 55ch;
-  margin-inline: auto;
-}
-
-.scroll-reveal span{
-  color: hsl(0 0% 100%/ 0);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, white, white);
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-  
-}
-
-.scroll-reveal h2 span{
-  animation-range-start: cover 20vh;
-  animation-range-end: cover 30vh;
-}
-
-.scroll-reveal p span{
-  animation-range-start: cover 22vh;
-  animation-range-end: cover 60vh;
-}
-
-@keyframes scroll-reveal {
-  
-  to {
-    background-size: 100% 100%;
+  &:nth-of-type(1) {
+    border-bottom: 1px solid #000;
   }
 }

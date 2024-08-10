@@ -17,7 +17,7 @@ function Experience() {
                 <div class="cont left-cont">
                     <img src={dotimg} alt="" />
                     <div class="text-box">
-                        <h2>1st & 2nd Semester</h2>
+                        <h2>1st and 2nd Semester</h2>
                         <small>2020-2021</small>
                         <p>C++ for Programming Fundamentals. HTML Basics</p>
                         <p>C++ Object Oriented Programming</p>
