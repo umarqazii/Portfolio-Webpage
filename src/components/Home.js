@@ -83,7 +83,7 @@ function Home() {
     <div className="App">
       <Navbar />
 
-      <header className="App-header" style={{ marginTop: "-5vh" }}>
+      <header className="App-header" >
         {" "}
         {/* Custom margin-top */}
         <div className="container">
@@ -142,13 +142,14 @@ function Home() {
       </header>
 
       
-
-      <section>
-        <h1 className="reveal-type">More About Me</h1>
-        <p className="reveal-type">
-        I am a motivated Computer Science graduate with strong skills in C/C++, JavaScript, SQL, and web development technologies including the MERN stack. My academic journey, including a Bachelor's from FAST-NUCES, coupled with hands-on experience through internships and projects, has equipped me with a robust foundation in full-stack development. I’ve successfully led and contributed to projects like MindSight, a MERN-based anxiety detection system, and a Hospital Management System. My portfolio showcases my proficiency in building dynamic web applications and managing complex systems. I am eager to bring my knowledge and passion for technology to impactful real-world projects.
-        </p>
-      </section>
+      <div className="responsive-section">
+  <section>
+    <h1 className="reveal-type" style={{fontFamily: "Audiowide, sans-serif"}}>More About Me</h1>
+    <p className="reveal-type" style={{fontFamily: "Audiowide, sans-serif"}}>
+      I am a motivated Computer Science graduate with strong skills in C/C++, JavaScript, SQL, and web development technologies including the MERN stack. My academic journey, including a Bachelor's from FAST-NUCES, coupled with hands-on experience through internships and projects, has equipped me with a robust foundation in full-stack development. I’ve successfully led and contributed to projects like MindSight, a MERN-based anxiety detection system, and a Hospital Management System. My portfolio showcases my proficiency in building dynamic web applications and managing complex systems. I am eager to bring my knowledge and passion for technology to impactful real-world projects.
+    </p>
+  </section>
+</div>
 
 
       {/* Add a button that would download my resume*/}
@@ -161,6 +162,7 @@ function Home() {
               style={{
                 fontFamily: "Audiowide, sans-serif",
                 marginRight: "15px",
+                marginBottom: "15px",
               }}
             >
               Download My CV
@@ -168,7 +170,7 @@ function Home() {
             <button
               onClick={downloadResume}
               className="btn btn-outline-light btn-lg"
-              style={{ fontFamily: "Audiowide, sans-serif" }}
+              style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
             >
               Download My Resume
             </button>

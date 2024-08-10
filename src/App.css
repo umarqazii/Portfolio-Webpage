@@ -29,6 +29,13 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-top: -5vh;
+}
+
+@media (max-width: 768px) {
+  .App-header  {
+    margin-top: -10vh; /* Less negative margin on smaller screens */
+  }
 }
 
 .App-link {
@@ -61,6 +68,17 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   
 }
+
+.responsive-section {
+  margin-top: -5vh; /* Use a percentage-based margin that adjusts with screen height */
+}
+
+@media (max-width: 768px) {
+  .responsive-section {
+    margin-top: -20vh; /* Less negative margin on smaller screens */
+  }
+}
+
 section {
   height: 100vh;
   padding: 0 clamp(1rem, 5vw, 4rem); /* Adjusted padding for better responsiveness */
@@ -76,6 +94,7 @@ section {
   p {
     font-size: clamp(1rem, 3vw, 2rem); /* Adjusted for better scaling on smaller screens */
     color: #cac9c9;
+    
   }
 
   &:nth-of-type(1) {
