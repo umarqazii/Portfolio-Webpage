@@ -34,7 +34,7 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
 
 @media (max-width: 768px) {
   .App-header  {
-    margin-top: -10vh; /* Less negative margin on smaller screens */
+    margin-top: -20vh; /* Less negative margin on smaller screens */
   }
 }
 
