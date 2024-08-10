@@ -39,7 +39,7 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 @media (max-width: 768px) {
-  .container  {
+  .cv-container  {
     margin-top: -30vh; /* Less negative margin on smaller screens */
   }
 }
