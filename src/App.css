@@ -79,6 +79,11 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   margin-top: -5vh; /* Use a percentage-based margin that adjusts with screen height */
 }
 
+.responsive-section h1,
+.responsive-section p {
+  font-family: "Audiowide" !important;
+}
+
 @media (max-width: 768px) {
   .responsive-section {
     margin-top: -23vh; /* Less negative margin on smaller screens */
@@ -94,12 +99,13 @@ section {
 
   h1 {
     font-size: clamp(1.5rem, 4vw, 3rem); /* Set a more balanced range for font size */
-    font-family: "AudioWide", sans-serif;
+    font-family: "AudioWide" !important;
     color: #cac9c9;
   }
 
   p {
     font-size: clamp(1rem, 3vw, 2rem); /* Adjusted for better scaling on smaller screens */
+    font-family: "AudioWide" !important;
     color: #cac9c9;
   }
 

@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Typed from "typed.js";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 // import Lenis from "@studio-freight/lenis";
-import gsap from 'gsap';
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from 'split-type';
+import SplitType from "split-type";
 import "../App.css";
 import myPic from "../assets/dp1.jpg"; // Import your image
 import cv from "../assets/UmarQaziCV.pdf";
 import resume from "../assets/UmarQaziResume.pdf";
 import { SlActionRedo } from "react-icons/sl";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileCode } from "@fortawesome/free-solid-svg-icons";
+import Slider from "./slider";
+import "bootstrap/dist/css/bootstrap.min.css";
 function Home() {
-
-
-
   useEffect(() => {
     // const lenis = new Lenis();
-    
+
     // function raf(time) {
     //   lenis.raf(time);
     //   requestAnimationFrame(raf);
@@ -33,18 +32,18 @@ function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const splitTypes = document.querySelectorAll('.reveal-type');
+    const splitTypes = document.querySelectorAll(".reveal-type");
 
     splitTypes.forEach((char) => {
-      const text = new SplitType(char, { types: 'chars,words' });
+      const text = new SplitType(char, { types: "chars,words" });
 
       gsap.from(text.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'top 80%',
-          end: 'top 20%',
+          start: "top 80%",
+          end: "top 20%",
           scrub: true,
-          markers: false
+          markers: false,
         },
         opacity: 0,
         stagger: 0.2,
@@ -52,22 +51,26 @@ function Home() {
       });
     });
 
-    gsap.fromTo(".folder-icon", {
-      opacity: 0, // Initially invisible
-      y: 40, // Move it a bit downwards
-    }, {
-      opacity: 1, // Fully visible
-      y: 0, // Move it to its original position
-      scrollTrigger: {
-        trigger: ".folder-icon",
-        start: "top 90%", // Adjust as necessary
-        end: "top 50%",
-        scrub: true,
-        markers: false,
+    gsap.fromTo(
+      ".folder-icon",
+      {
+        opacity: 0, // Initially invisible
+        y: 40, // Move it a bit downwards
       },
-      duration: 1,
-      ease: "power3.out"
-    });
+      {
+        opacity: 1, // Fully visible
+        y: 0, // Move it to its original position
+        scrollTrigger: {
+          trigger: ".folder-icon",
+          start: "top 90%", // Adjust as necessary
+          end: "top 50%",
+          scrub: true,
+          markers: false,
+        },
+        duration: 1,
+        ease: "power3.out",
+      }
+    );
 
     var typedName = new Typed(".typedName", {
       strings: ["Umar Qazi"],
@@ -103,10 +106,8 @@ function Home() {
 
   return (
     <div className="App">
-      
-      
       <Navbar />
-      <header className="App-header" >
+      <header className="App-header">
         {" "}
         {/* Custom margin-top */}
         <div className="container">
@@ -164,24 +165,45 @@ function Home() {
         </div>
       </header>
 
-      
-      <div className="responsive-section">
-      <section>
-  <h1 className="reveal-type" style={{ fontFamily: "Audiowide" }}><b>More About Me</b></h1>
-  <p className="reveal-type" style={{ fontFamily: "Audiowide" }}>
-    I am a motivated Computer Science graduate with strong skills in C/C++, JavaScript, SQL, and web development technologies including the MERN stack. My academic journey, including a Bachelor's from FAST-NUCES, coupled with hands-on experience through internships and projects, has equipped me with a robust foundation in full-stack development. I’ve successfully led and contributed to projects like MindSight, a MERN-based anxiety detection system, and a Hospital Management System. My portfolio showcases my proficiency in building dynamic web applications and managing complex systems. I am eager to bring my knowledge and passion for technology to impactful real-world projects.
-    <br /><br />
-    <Link to="/projects" className="folder-icon" style={{ textDecoration: 'none', color: 'green' }}>
-      Take a Look at my Projects
-      <FontAwesomeIcon className="" icon={faFileCode} style={{ marginLeft: '8px', color: 'green' }} />
-    </Link>
-  </p>
-</section>
-</div>
-
+      <div className="responsive-section" >
+        <section>
+          <h1 className="reveal-type">
+            <b>More About Me</b>
+          </h1>
+          <p className="reveal-type">
+            I am a motivated Computer Science graduate from Pakistan with strong
+            skills in MERN stack. My academic journey, including a Bachelor's
+            from FAST-NUCES, coupled with hands-on experience through
+            internships and projects, has equipped me with a robust foundation
+            in full-stack development. I’ve successfully led and contributed to
+            projects like MindSight, a MERN-based anxiety detection system, and
+            a Hospital Management System. My portfolio showcases my proficiency
+            in building dynamic web applications and managing complex systems. I
+            am eager to bring my knowledge and passion for technology to
+            impactful real-world projects.
+            <br />
+            <br />
+          </p>
+            <Link
+              to="/projects"
+              className="folder-icon"
+              style={{ textDecoration: "none", color: "green", fontSize: "clamp(1rem, 3vw, 2rem)" }}
+            >
+              Take a Look at my Projects
+              <FontAwesomeIcon
+                className=""
+                icon={faFileCode}
+                style={{ marginLeft: "8px", color: "green" }}
+              />
+            </Link>
+        </section>
+      </div>
+      <div className="slider-component" style={{marginTop:'-20px'}}>
+      <Slider />
+      </div>
 
       {/* Add a button that would download my resume*/}
-      <div className="cv-container" style={{ marginTop: "-20px" }}>
+      <div className="cv-container" style={{ marginTop: "20px" }}>
         <div className="row">
           <div className="col text-center">
             <button
@@ -198,7 +220,10 @@ function Home() {
             <button
               onClick={downloadResume}
               className="btn btn-outline-light btn-lg"
-              style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
+              style={{
+                fontFamily: "Audiowide, sans-serif",
+                marginBottom: "15px",
+              }}
             >
               Download My Resume
             </button>
