@@ -72,6 +72,27 @@ function Home() {
       }
     );
 
+    gsap.fromTo(
+      ".slider-component",
+      {
+        opacity: 0, // Initially invisible
+        y: 300, // Move it a bit downwards
+      },
+      {
+        opacity: 1, // Fully visible
+        y: 0, // Move it to its original position
+        scrollTrigger: {
+          trigger: ".slider-component",
+          start: "top 90%", // Adjust as necessary
+          end: "top 50%",
+          scrub: true,
+          markers: false,
+        },
+        duration: 4,
+        ease: "power4.out",
+      }
+    );
+
     var typedName = new Typed(".typedName", {
       strings: ["Umar Qazi"],
       typeSpeed: 150,
@@ -198,6 +219,7 @@ function Home() {
             </Link>
         </section>
       </div>
+
       <div className="slider-component" style={{marginTop:'-20px'}}>
       <Slider />
       </div>

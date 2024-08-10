@@ -90,6 +90,12 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   }
 }
 
+@media (max-width: 768px) {
+  .slider-component {
+    margin-top: -150px; /* Less negative margin on smaller screens */
+  }
+}
+
 section {
   height: 100vh;
   padding: 0 clamp(1rem, 5vw, 4rem); /* Adjusted padding for better responsiveness */
