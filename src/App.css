@@ -38,6 +38,12 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
   }
 }
 
+@media (max-width: 768px) {
+  .container  {
+    margin-top: -30vh; /* Less negative margin on smaller screens */
+  }
+}
+
 .App-link {
   color: #61dafb;
 }
