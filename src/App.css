@@ -92,7 +92,7 @@ overflow-x: hidden; /* Prevent horizontal scrollbar */
 
 @media (max-width: 768px) {
   .slider-component {
-    margin-top: -150px; /* Less negative margin on smaller screens */
+    margin-top: -350px; /* Less negative margin on smaller screens */
   }
 }
 
@@ -119,3 +119,32 @@ section {
     border-bottom: 1px solid #000;
   }
 }
+
+.skill {
+  width: 200px;
+  margin: 5px 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .skill {
+    width: 130px;
+    margin: 5px 15px;
+    border-radius: 5px;
+  }
+}
+
+.bskill {
+  width: 200px;
+  margin: 5px 50px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .bskill {
+    width: 100px;
+    margin: 5px 15px;
+    border-radius: 5px;
+  }
+}
+

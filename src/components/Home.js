@@ -10,7 +10,6 @@ import "../App.css";
 import myPic from "../assets/dp1.jpg"; // Import your image
 import cv from "../assets/UmarQaziCV.pdf";
 import resume from "../assets/UmarQaziResume.pdf";
-import { SlActionRedo } from "react-icons/sl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode } from "@fortawesome/free-solid-svg-icons";
 import Slider from "./slider";
@@ -46,10 +45,33 @@ function Home() {
           markers: false,
         },
         opacity: 0,
-        stagger: 0.2,
-        duration: 1,
+        stagger: 0.5,
+        duration: 4,
       });
     });
+
+    gsap.fromTo(
+      ".reveal-heading",
+      {
+        opacity: 0, // Initially invisible
+        x: -1000, // Move it a bit downwards
+        y: 0,
+      },
+      {
+        opacity: 1, // Fully visible
+        x: 0, // Move it to its original position
+        y: 0,
+        scrollTrigger: {
+          trigger: ".reveal-heading",
+          start: "top 90%", // Adjust as necessary
+          end: "top 50%",
+          scrub: true,
+          markers: false,
+        },
+        duration: 1,
+        ease: "power4.out",
+      }
+    );
 
     gsap.fromTo(
       ".folder-icon",
@@ -76,7 +98,7 @@ function Home() {
       ".slider-component",
       {
         opacity: 0, // Initially invisible
-        y: 300, // Move it a bit downwards
+        y: 200, // Move it a bit downwards
       },
       {
         opacity: 1, // Fully visible
@@ -88,7 +110,7 @@ function Home() {
           scrub: true,
           markers: false,
         },
-        duration: 4,
+        duration: 1,
         ease: "power4.out",
       }
     );
@@ -188,7 +210,7 @@ function Home() {
 
       <div className="responsive-section" >
         <section>
-          <h1 className="reveal-type">
+          <h1 className="reveal-heading" style={{}}>
             <b>More About Me</b>
           </h1>
           <p className="reveal-type">
@@ -208,13 +230,13 @@ function Home() {
             <Link
               to="/projects"
               className="folder-icon"
-              style={{ textDecoration: "none", color: "green", fontSize: "clamp(1rem, 3vw, 2rem)" }}
+              style={{ textDecoration: "none", color: "#72c4bd", fontSize: "clamp(1rem, 3vw, 2rem)", fontFamily:'Audiowide' }}
             >
               Take a Look at my Projects
               <FontAwesomeIcon
                 className=""
                 icon={faFileCode}
-                style={{ marginLeft: "8px", color: "green" }}
+                style={{ marginLeft: "8px", color: "#72c4bd" }}
               />
             </Link>
         </section>
