@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
 import Navbar from "./Navbar";
 import dotimg from '../assets/dot.png';
 import '../timeline.css';
 import '../App.css';
-
-
+import PdfViewer from "./pdfViewer";
+import cv from "../assets/UmarQaziCV.pdf";
 
 function Experience() {
-
+    let path = cv;
+    console.log('Path:', path);
+    
     return (
         <div className="App" >
             <Navbar />
@@ -68,6 +71,7 @@ function Experience() {
                         <small><b>Mugutech</b> June 2024- Aug 2024</small>
                         <p>Web Development Internship</p>
                         <p><b>Technologies:</b> React.js, Node.js, Express, MySQL, Wordpress, Figma</p>
+                        <Link to={{pathname: "/pdfViewer", state: { path: path }}} >View Certificate</Link>
                         <div class="left-cont-arrow"></div>
                     </div>
                 </div>
