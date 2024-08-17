@@ -5,10 +5,9 @@ import dotimg from '../assets/dot.png';
 import '../timeline.css';
 import '../App.css';
 import PdfViewer from "./pdfViewer";
-import cv from "../assets/UmarQaziCV.pdf";
 
 function Experience() {
-    let path = cv;
+    let path = "/assets/InternshipCertificate.pdf";
     console.log('Path:', path);
     
     return (
@@ -71,7 +70,9 @@ function Experience() {
                         <small><b>Mugutech</b> June 2024- Aug 2024</small>
                         <p>Web Development Internship</p>
                         <p><b>Technologies:</b> React.js, Node.js, Express, MySQL, Wordpress, Figma</p>
-                        <Link to={{pathname: "/pdfViewer", state: { path: path }}} >View Certificate</Link>
+                        <Link 
+                        to={"/pdfViewer/" + encodeURIComponent(path)}
+                        >View Certificate</Link>
                         <div class="left-cont-arrow"></div>
                     </div>
                 </div>

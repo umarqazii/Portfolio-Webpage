@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/slider" element={<Slider />} />
-          <Route path="/pdfViewer" element={<PdfViewer />} />
+          <Route path="/pdfViewer/:path" element={<PdfViewer />} />
         </Routes>
       </BrowserRouter>
       

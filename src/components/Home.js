@@ -8,13 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import "../App.css";
 import myPic from "../assets/dp1.jpg"; // Import your image
-import cv from "../assets/UmarQaziCV.pdf";
-import resume from "../assets/UmarQaziResume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode } from "@fortawesome/free-solid-svg-icons";
 import Slider from "./slider";
 import "bootstrap/dist/css/bootstrap.min.css";
 function Home() {
+  let cvPath = "/assets/UmarQaziCV.pdf";
+  let resumePath = "/assets/UmarQaziResume.pdf";
   useEffect(() => {
     // const lenis = new Lenis();
 
@@ -135,14 +135,14 @@ function Home() {
 
   function downloadCV() {
     var link = document.createElement("a");
-    link.href = cv;
+    link.href = cvPath;
     link.download = "UmarQaziCV.pdf";
     link.click();
   }
 
   function downloadResume() {
     var link = document.createElement("a");
-    link.href = resume;
+    link.href = resumePath;
     link.download = "UmarQaziResume.pdf";
     link.click();
   }
@@ -246,34 +246,50 @@ function Home() {
       <Slider />
       </div>
 
-      {/* Add a button that would download my resume*/}
+      
       <div className="cv-container" style={{ marginTop: "20px" }}>
-        <div className="row">
-          <div className="col text-center">
-            <button
-              onClick={downloadCV}
-              className="btn btn-outline-light btn-lg"
-              style={{
-                fontFamily: "Audiowide, sans-serif",
-                marginRight: "15px",
-                marginBottom: "15px",
-              }}
+    <div className="row justify-content-center">
+        <div className="col-auto text-center mb-3">
+            <Link 
+                to={"/pdfViewer/" + encodeURIComponent(cvPath)}
+                className="btn btn-outline-light btn-lg"
+                style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
             >
-              Download My CV
-            </button>
-            <button
-              onClick={downloadResume}
-              className="btn btn-outline-light btn-lg"
-              style={{
-                fontFamily: "Audiowide, sans-serif",
-                marginBottom: "15px",
-              }}
-            >
-              Download My Resume
-            </button>
-          </div>
+                View CV
+            </Link>
         </div>
-      </div>
+        <div className="col-auto text-center mb-3">
+            <Link 
+                to={"/pdfViewer/" + encodeURIComponent(resumePath)}
+                className="btn btn-outline-light btn-lg"
+                style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
+            >
+                View Resume
+            </Link>
+        </div>
+    </div>
+    <div className="row justify-content-center">
+        <div className="col-auto text-center mb-3">
+            <button
+                onClick={downloadCV}
+                className="btn btn-outline-light btn-lg"
+                style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
+            >
+                Download My CV
+            </button>
+        </div>
+        <div className="col-auto text-center mb-3">
+            <button
+                onClick={downloadResume}
+                className="btn btn-outline-light btn-lg"
+                style={{ fontFamily: "Audiowide, sans-serif", marginBottom: "15px" }}
+            >
+                Download My Resume
+            </button>
+        </div>
+    </div>
+</div>
+
     </div>
   );
 }
