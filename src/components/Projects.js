@@ -43,7 +43,7 @@ function Projects() {
                         database 
                         </Card.Text>
                         <div style={{ marginTop: 'auto', marginBottom: '5px' }}>
-                            <Button variant="dark" href="https://laundary-app-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">Check it Out</Button>
+                            <Button variant="dark" href="https://laundry-app-fe.vercel.app/" target="_blank" rel="noopener noreferrer">Check it Out</Button>
                         </div>
                     </Card.Body>
                 </Card>
