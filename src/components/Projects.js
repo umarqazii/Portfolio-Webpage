@@ -9,6 +9,7 @@ import cryptoimg from '../assets/crypto.png';
 import mindsight from '../assets/mind-sight.png'
 import laundryimg from '../assets/laundry.png'
 import hospitalimg from '../assets/hospital.png'
+import cookimg from '../assets/cookbook.png'
 import '../App.css';
 
 function Projects() {
@@ -30,6 +31,21 @@ function Projects() {
                         </Card.Text>
                         <div style={{ marginTop: 'auto', marginBottom: '5px' }}>
                             <Button variant="dark" href="https://github.com/umarqazii/Final-Year-Project" target="_blank" rel="noopener noreferrer">Check it Out</Button>
+                        </div>
+                    </Card.Body>
+                </Card>
+
+                <Card className="Card" style={{ width: '18rem', background: 'grey' }}>
+                    <Card.Img variant="top" src={cookimg} style={{ borderRadius: '5px', width: '100%', borderBottomLeftRadius: '0px', borderBottomRightRadius: '0px'  }} />
+                    <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
+                        <Card.Title>Cook Book</Card.Title>
+                        <Card.Text style={{ fontSize: '13px', flex: '1 0 auto' }}>
+                        Application that enables you to access millions of recipes from all over the world. You can search based
+                        on your ingredients and cuisine. <b>MERN, Typescript</b> <br /><br />
+                        <b>Work in Progress!!</b>
+                        </Card.Text>
+                        <div style={{ marginTop: 'auto', marginBottom: '5px' }}>
+                            <Button variant="dark" href="https://cook-book-fe.vercel.app/" target="_blank" rel="noopener noreferrer">Check it Out</Button>
                         </div>
                     </Card.Body>
                 </Card>
