@@ -10,6 +10,7 @@ import mindsight from '../assets/mind-sight.png'
 import laundryimg from '../assets/laundry.png'
 import hospitalimg from '../assets/hospital.png'
 import cookimg from '../assets/cookbook.png'
+import gameimg from '../assets/game.png'
 import '../App.css';
 
 function Projects() {
@@ -46,6 +47,19 @@ function Projects() {
                         </Card.Text>
                         <div style={{ marginTop: 'auto', marginBottom: '5px' }}>
                             <Button variant="dark" href="https://cook-book-fe.vercel.app/" target="_blank" rel="noopener noreferrer">Check it Out</Button>
+                        </div>
+                    </Card.Body>
+                </Card>
+                
+                <Card className="Card" style={{ width: '18rem', background: 'grey' }}>
+                    <Card.Img variant="top" src={gameimg} style={{ borderRadius: '5px', width: '100%', borderBottomLeftRadius: '0px', borderBottomRightRadius: '0px'  }} />
+                    <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
+                        <Card.Title>Number Guessing Game</Card.Title>
+                        <Card.Text style={{ fontSize: '13px', flex: '1 0 auto' }}>
+                        This is a React-based application for a guessing game. Responsive design with a visually appealing user interface. <b>MERN, Axios, React Tooltip</b> <br /><br />
+                        </Card.Text>
+                        <div style={{ marginTop: 'auto', marginBottom: '5px' }}>
+                            <Button variant="dark" href="https://guessing-game-shram.vercel.app/" target="_blank" rel="noopener noreferrer">Check it Out</Button>
                         </div>
                     </Card.Body>
                 </Card>

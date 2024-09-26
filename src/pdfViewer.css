@@ -1,9 +1,9 @@
 .pdfContainer{
     width: 100%;
-    min-height: 150vh;
-    overflow-y: auto;
+    /* min-height: 100vh; */
+    /* overflow-y: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100%;
 }
